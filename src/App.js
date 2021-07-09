@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import TabsComp from './components/tabs/TabsComp.js'
+import Tabs from './components/tabs/TabsComp.js'
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
 
     return (
-        <TabsComp />
+        <Tabs />
     );
 }
 

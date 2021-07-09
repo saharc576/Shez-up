@@ -1,9 +1,9 @@
 import React, {FunctionComponent, useState} from 'react';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import './TabsComp.css';
-import About from './../about/About'
-import WorkoutCard from './../workoutCard/WorkoutCard'
-import Contact from './../contact/Contact'
+import About from '../about/About'
+import WorkoutCard from '../workoutCard/WorkoutCard'
+import Contact from '../contact/Contact'
 
 const TabsComp = (props) => {
     const tabsList = ['צור קשר', 'גלריה', 'מחירון', 'אימונים', 'דף הבית']
@@ -22,15 +22,19 @@ const TabsComp = (props) => {
                 <Tab onClick={() => changeTab(3)}>{tabsList[3]}</Tab>
                 <Tab onClick={() => changeTab(4)}>{tabsList[4]}</Tab>
             </TabList>
+
+            
+            <TabPanel>
             
             {
-               currTab == 4 ? <About/> :
+               currTab == 4 ? "chasc" :
                currTab == 3 ? <WorkoutCard/> :
                currTab == 2 ? "two" :
                currTab == 1 ? "one" :
                <Contact/> 
 
             }
+            </TabPanel>
 
             
         </Tabs>

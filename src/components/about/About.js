@@ -8,11 +8,15 @@ import {
   const About = () => {
       return (
         <div>
-            <Card>
-                <CardBody>
-                                         
-                </CardBody>
-            </Card>
+            <li>
+            לחילחי
+            דגכ
+            דגכד
+
+            דגכדגכ
+            שדגכדגכדגכדגכדגכדגכ
+            דגכדגכדגכ
+            </li>
         </div>
       );
   }
