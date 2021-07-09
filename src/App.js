@@ -11,7 +11,10 @@ function App() {
 
 
     return (
-        <Tabs />
+        <div>
+            <Tabs/>
+            <button dir="rtl"> התחבר</button>
+        </div>
     );
 }
 

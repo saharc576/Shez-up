@@ -23,18 +23,21 @@ const TabsComp = (props) => {
                 <Tab onClick={() => changeTab(4)}>{tabsList[4]}</Tab>
             </TabList>
 
-            
-            <TabPanel>
-            
+            <TabPanel><Contact/> </TabPanel>
+            <TabPanel>"one"</TabPanel>
+            <TabPanel>"two"</TabPanel>
+            <TabPanel>"three"</TabPanel>
+            <TabPanel><About/></TabPanel>
+{/*             
             {
-               currTab == 4 ? "chasc" :
-               currTab == 3 ? <WorkoutCard/> :
-               currTab == 2 ? "two" :
-               currTab == 1 ? "one" :
+            
+               currTab === 4 ?  <About/> :
+               currTab === 3 ? <WorkoutCard/> :
+               currTab === 2 ? "two" :
+               currTab === 1 ? "one" :
                <Contact/> 
 
-            }
-            </TabPanel>
+            } */}
 
             
         </Tabs>

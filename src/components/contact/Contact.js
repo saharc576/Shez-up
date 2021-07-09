@@ -1,12 +1,14 @@
 import React from "react";
 import {useForm} from "react-hook-form";
+import './Contact.css'
 
 const Contact = () => {
     const {register, handleSubmit} = useForm();
     const onSubmit = (data) => alert(JSON.stringify(data));
 
     return (
-        <form onSubmit={
+        
+        <form className="form" dir="rtl" onSubmit={
             handleSubmit(onSubmit)
         }>
 
