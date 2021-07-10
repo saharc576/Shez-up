@@ -1,46 +1,29 @@
-import React, {FunctionComponent, useState} from 'react';
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-import './TabsComp.css';
-import About from '../about/About'
-import WorkoutCard from '../workoutCard/WorkoutCard'
-import Contact from '../contact/Contact'
+import { NavLink } from 'react-router-dom';
+import classes from './TabsComp.module.css'
 
-const TabsComp = (props) => {
-    const tabsList = ['צור קשר', 'גלריה', 'מחירון', 'אימונים', 'דף הבית']
-    const [currTab, setcurrTab] = useState(tabsList.length -1);
-    
-    const changeTab = (index) => {
-        setcurrTab(index);
-    }
-
+const TabsComp = () => {
     return (
-        <Tabs defaultIndex={tabsList.length-1}>
-            <TabList >
-                <Tab onClick={() => changeTab(0)}>{tabsList[0]}</Tab>
-                <Tab onClick={() => changeTab(1)}>{tabsList[1]}</Tab>
-                <Tab onClick={() => changeTab(2)}>{tabsList[2]}</Tab>
-                <Tab onClick={() => changeTab(3)}>{tabsList[3]}</Tab>
-                <Tab onClick={() => changeTab(4)}>{tabsList[4]}</Tab>
-            </TabList>
-
-            <TabPanel><Contact/> </TabPanel>
-            <TabPanel>"one"</TabPanel>
-            <TabPanel>"two"</TabPanel>
-            <TabPanel>"three"</TabPanel>
-            <TabPanel><About/></TabPanel>
-{/*             
-            {
-            
-               currTab === 4 ?  <About/> :
-               currTab === 3 ? <WorkoutCard/> :
-               currTab === 2 ? "two" :
-               currTab === 1 ? "one" :
-               <Contact/> 
-
-            } */}
-
-            
-        </Tabs>
+        <header className={classes.header}>
+            <nav>
+                <ul>
+                    <li>
+                        <NavLink activeClassName={classes.active} to='/Contact'>צור קשר</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName={classes.active} to='/Gallery'>גלריה</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName={classes.active} to='/Prices'>מחירון</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName={classes.active} to='/Workouts'>אימונים</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName={classes.active} to='/Home'>דף הבית</NavLink>
+                    </li>
+               </ul>
+            </nav>
+        </header>
     )
 }
 
