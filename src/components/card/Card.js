@@ -1,11 +1,7 @@
 import React from 'react'
 import './Card.css'
 
-const Card = ({imgURL, title, content}) => {
-
-    const orderHandler = (e) => {
-        
-    }
+const Card = ({onClick ,imgURL, title, content}) => {
 
     return (
         <div className="card">
@@ -15,7 +11,7 @@ const Card = ({imgURL, title, content}) => {
                     <b>{title}</b>
                 </h4>
                 <p className="price"> {content} </p>
-                <p> <button onClick={orderHandler}> הזמן </button> </p>
+                <p> <button onClick={onClick}> הזמן </button> </p>
             </div>
         </div>
     );

@@ -2,15 +2,26 @@ import React, {useState} from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom'
 import TabsComp from './components/tabs/TabsComp.js';
 import Home from './pages/Home'
-import GalleryPage from './pages/Gallery'
+import GalleryPage from './pages/GalleryPage'
 import Prices from './pages/Prices'
+import Workouts from './pages/Workouts'
+
 
 
 function App() {
 
+    const [loggedIn, setLoggedIn] = useState(false);
+    
+    const loginHandler = () => {
+        // popup login form
+        // compare user name and password with data base
+        // grent access or deny 
+    }
+
     return (
         <div>
-            <TabsComp/>
+            <TabsComp loggedIn={loggedIn} tryLogin={loginHandler}/>
+            <button>Login</button>
             <main>
                 <Switch>
                     <Route path='/' exact>
@@ -20,10 +31,7 @@ function App() {
                         <Home/>
                     </Route>
                     <Route path='/Workouts' exact>
-                        sfgs
-                    </Route>
-                    <Route path='/Workouts/:workoutId'>
-                        sfgs
+                        <Workouts />
                     </Route>
                     <Route path='/Prices'>
                         <Prices />
@@ -31,6 +39,12 @@ function App() {
                     <Route path='/Gallery'>
                         <GalleryPage/>
                     </Route>
+                     <Route path='/personal/nutrion'>
+                            nutriotion content
+                    </Route>  
+                    <Route path='/personal/workoutVideos'>
+                            nutriotion content
+                    </Route> 
                     <Route path='/Contact'>
                         sfgs
                     </Route>
