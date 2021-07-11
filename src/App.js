@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom'
 import TabsComp from './components/tabs/TabsComp.js';
 import Home from './pages/Home'
-import Gallery from './pages/Gallery'
+import GalleryPage from './pages/Gallery'
+import Prices from './pages/Prices'
 
 
 function App() {
@@ -25,10 +26,10 @@ function App() {
                         sfgs
                     </Route>
                     <Route path='/Prices'>
-                        sfgs
+                        <Prices />
                     </Route>
                     <Route path='/Gallery'>
-                        <Gallery/>
+                        <GalleryPage/>
                     </Route>
                     <Route path='/Contact'>
                         sfgs

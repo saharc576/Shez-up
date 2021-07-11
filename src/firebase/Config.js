@@ -18,7 +18,7 @@ import 'firebase/firestore';
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const projectStorage = firebase.storage("gs://shez-up.appspot.com/");
-const projectFirestore = firebase.firestore();
+const projectStorage = firebase.storage();
+// const projectFirestore = firebase.firestore();
 
-export { projectStorage, projectFirestore };
+export { projectStorage };
