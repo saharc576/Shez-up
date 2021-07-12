@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import {logout} from './auth'
 
 
-const Logout = () => {
+const Logout = ({_setUser}) => {
+    _setUser(false)
+    logout();
     return (
-        logout()
+        <div></div>
     );
 }
 

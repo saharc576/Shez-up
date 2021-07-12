@@ -1,9 +1,19 @@
 import { useParams } from 'react-router-dom';
 
-const WorkoutDetail = () => {
+
+const Nutrition = ({validateUser}) => {
   const params = useParams();
+  const userLoggedIn = validateUser();
 
   console.log(params.productId);
+
+  if (userLoggedIn) {
+    return (
+      <div>
+        you are not logged in
+      </div>
+    );
+  }
 
   return (
     <section>
@@ -13,4 +23,4 @@ const WorkoutDetail = () => {
   );
 };
 
-export default WorkoutDetail;
+export default Nutrition;

@@ -14,12 +14,12 @@ const TabsComp = ({loggedIn}) => {
                     <li>
                         <NavLink activeClassName={classes.active} to='/Contact'>צור קשר</NavLink>
                     </li>
-                    {loggedIn && <li>
+                    <li>
                         <NavLink activeClassName={classes.active} to='/personal/nutrion'>תזונה</NavLink>
-                    </li>}
-                    {loggedIn && <li>
-                        <NavLink activeClassName={classes.active} to='/personal/workoutVideos'>אימונים מוקלטים</NavLink>
-                    </li>}
+                    </li>
+                    <li>
+                        <NavLink activeClassName={classes.active} to='/personal/workoutVideos'>הקלטות</NavLink>
+                    </li>
                     <li>
                         <NavLink activeClassName={classes.active} to='/Gallery'>גלריה</NavLink>
                     </li>

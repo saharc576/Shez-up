@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {login} from './auth'
   
-const Login = () => {
+const Login = ({_setUser}) => {
     const [form,setForm] = useState({
         email:'',
         password:''
@@ -10,6 +10,7 @@ const Login = () => {
         e.preventDefault();
         try{
              await login(form);
+             _setUser(true);
         } catch (err) {
             alert(err);
         }

@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import GalleryPage from './pages/GalleryPage'
 import Prices from './pages/Prices'
 import Workouts from './pages/Workouts'
+import Nutrition from './pages/Nutrition.js';
+import WorkoutVideos from './pages/WorkoutVideos.js';
 import {projectAuth} from './firebase/Config.js';
 import PopupAuth from './components/authentication/PopUpAuth.js';
 
@@ -18,6 +20,17 @@ function App() {
     const btnText = user ? 'התנתק' :
                             'התחבר'
                             
+    const userHandle = () => {
+        setUser(!user)
+    }
+
+    const validateOrAlert = () => {
+        if (!user) {
+            alert('you must login to watch this content');
+            return true;
+        } 
+        return false;
+    }
     return (
         <div style={
             {
@@ -26,8 +39,8 @@ function App() {
             }
         }>
             <TabsComp loggedIn={user}/>
-            <PopupAuth buttonText="הירשם" onClick={() => setUser(!user)}/>
-            <PopupAuth buttonText={btnText} onClick={() => setUser(!user)}/>
+            <PopupAuth buttonText="הירשם" setUser={userHandle}/>
+            <PopupAuth buttonText={btnText} setUser={userHandle}/>
             <main >
                 <Switch>
                     <Route path='/' exact>
@@ -46,10 +59,10 @@ function App() {
                         <GalleryPage/>
                     </Route>
                     <Route path='/personal/nutrion'>
-                        nutriotion content
+                        <Nutrition validateUser={() => validateOrAlert}/>
                     </Route>
                     <Route path='/personal/workoutVideos'>
-                        nutriotion content
+                        <WorkoutVideos validateUser={() => validateOrAlert}/>
                     </Route>
                     <Route path='/Contact'>
                         sfgs
