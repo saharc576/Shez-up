@@ -1,0 +1,111 @@
+.signin{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .signin>form{
+    display: grid; 
+    flex-direction: column;
+    width: inherit;
+    }
+    .signin>form>input{
+    margin-bottom: 5px;
+    font-size: 15px;
+    }
+    .modal {
+        font-size: 12px;
+        background-color: #9b9494;
+        background-size: 70px;
+      
+      }
+      
+       .header {
+        width: 100%;
+        font-weight: 900;
+        border-bottom: 1px solid gray;
+        font-size: 18px;
+        text-align: center;
+        padding: 5px;
+        margin-top: 0;
+      }
+      .content {
+        width: 100%;
+        padding: 50px 50px;
+        margin-top: 0;
+        font-size: 12px;
+      }
+      .actions {
+        width: 100%;
+        padding: 10px 5px;
+        margin: auto;
+        text-align: center;
+      }
+
+      p{
+        font-size: 15px;
+        color: #4926e7;
+      }
+      .button {
+        display: inline-block;
+        padding: 5px 15px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: rgb(190, 189, 189);
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px #999;
+        }
+        
+        .button:hover {background-color: rgb(170, 169, 169)}
+        
+        .button:active {
+        background-color: rgb(170, 169, 169)1;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+        }
+        .log-in {
+            background-color: #000c08;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 50%;
+            transition: all ease-in-out 0.3s;
+            position: absolute;
+            top: 6px;
+            right: 6px;
+          }
+          .log-in:hover {
+            background: #4f8be1;
+            color: #fff;
+            border-color: #fff;
+          }
+        .sign-in {
+            background-color: #000c08;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 50%;
+            transition: all ease-in-out 0.3s;
+            position: absolute;
+            top: 6px;
+            right: 120px;
+          }
+          .sign-in:hover {
+            background: #4f8be1;
+            color: #fff;
+            border-color: #fff;
+          }

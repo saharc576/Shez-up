@@ -5,23 +5,61 @@ import Home from './pages/Home'
 import GalleryPage from './pages/GalleryPage'
 import Prices from './pages/Prices'
 import Workouts from './pages/Workouts'
+import { projectAuth } from './firebase/Config.js';
+import PopupAuth from './components/popUpAuth/PopUpAuth.js';
 
 
 
 function App() {
 
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [isOpenLogin, setIsOpenLogin] = useState(false);
+    const [isOpenSignin, setIsOpenSignin] = useState(false);
+    const [user, setUser] = useState(null);
     
-    const loginHandler = () => {
+    const loginHandler = async (email, password) => {
+        try {
+            const user = await projectAuth.signInWithEmailAndPassword(email, password);
+            setUser(user);
+        } catch (err) {
+            alert(err);
+        } finally {
+            setIsOpenLogin(false);
+        }
         // popup login form
         // compare user name and password with data base
         // grent access or deny 
     }
 
+    const signInHandler = async (email, password) => {
+        // popup login form
+        // compare user name and password with data base
+        // grent access or deny 
+        try {
+            const user = await projectAuth.createUserWithEmailAndPassword(email, password);
+            setUser(user);
+        } catch (err) {
+            alert(err);
+        } finally {
+            setIsOpenSignin(false);
+        }
+    }
+
+    const authHandler = (msg) => {
+        if (msg === 'login') {
+            setIsOpenLogin(!isOpenLogin);
+        } else if (msg === 'signin') {
+            setIsOpenSignin(!isOpenSignin)
+        } else {
+            projectAuth.signOut();
+        }
+    }
+    
+
     return (
         <div>
-            <TabsComp loggedIn={loggedIn} tryLogin={loginHandler}/>
-            <button>Login</button>
+            <TabsComp loggedIn={user} tryLogin={() => authHandler('login')} logout={() => authHandler('logout')} trySignIn={() => signInHandler('signin')}/>
+            <PopupAuth buttonText="הירשם" onClick={(email, password) => signInHandler(email, password)}/>
+            <PopupAuth buttonText="התחבר" onClick={(email, password) => loginHandler(email, password)}/>
             <main>
                 <Switch>
                     <Route path='/' exact>

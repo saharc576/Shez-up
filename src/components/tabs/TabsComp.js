@@ -2,12 +2,10 @@ import { NavLink } from 'react-router-dom';
 import classes from './TabsComp.module.css'
 import './Button.css';
 
-const TabsComp = ({loggedIn, tryLogin}) => {
- 
+const TabsComp = ({loggedIn}) => {
 
     return (
         <header>
-        <button onClick={tryLogin} className='log-in'>click me</button>
 
         <div className={classes.header}>
             <nav>
