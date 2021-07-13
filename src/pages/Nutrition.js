@@ -1,26 +1,22 @@
-import { useParams } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 
 
-const Nutrition = ({validateUser}) => {
-  const params = useParams();
-  const userLoggedIn = validateUser();
+const Nutrition = ({user}) => {
 
-  console.log(params.productId);
-
-  if (userLoggedIn) {
+    if (!user) {
+        return (
+            <div>
+                <header style={{fontSize:'70px'}}>אנא התחבר כדי לצפות בתוכן העמוד</header>
+                <header style={{fontSize:'70px'}}>אם אתה מחובר, צור קשר עם התמיכה</header>
+            </div>
+        );
+    }
     return (
-      <div>
-        you are not logged in
-      </div>
-    );
-  }
+        <section>
+            <h1>Workout Detail</h1>
 
-  return (
-    <section>
-      <h1>Workout Detail</h1>
-      <p>{params.productId}</p>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default Nutrition;

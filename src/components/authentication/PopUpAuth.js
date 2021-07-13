@@ -6,7 +6,7 @@ import Register from "./Register";
 import Logout from "./Logout";
 import { logout } from "./auth";
 
-const PopupAuth = ({buttonText, setUser}) => {
+const PopupAuth = ({buttonText, setUser, setPopup}) => {
     const isLogin = buttonText === 'התחבר' ;
     const isLogout = buttonText === 'התנתק' ;
     const isRegister = buttonText === 'הירשם' ;
@@ -21,16 +21,12 @@ const PopupAuth = ({buttonText, setUser}) => {
 
     return (
       <Popup
-        trigger={<button className={isLogin ? "sign-in" : "log-in" } > {buttonText} </button>}
+        trigger={<button className={isLogin ? "sign-in" : "log-in" }  onClick={setPopup}> {buttonText} </button>}
         modal
         nested
       >
       {close => (
-        <div className="modal">
-          <button className="close" onClick={close}>
-            &times;
-          </button>
-          <div className="header">Sign in</div>
+        <div >
           <div className="content">
           <div className="signin">
               {isLogin && <Login _setUser={setUser}/>}

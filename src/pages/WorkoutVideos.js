@@ -1,17 +1,17 @@
 import { useParams } from 'react-router-dom';
 
 
-const WorkoutVideos = ({validateUser}) => {
+const WorkoutVideos = ({user}) => {
   const params = useParams();
-  const userLoggedIn = validateUser();
 
   console.log(params.productId);
 
-  if (userLoggedIn) {
-    return (
-      <div>
-        you are not logged in
-      </div>
+  if (!user) {
+      return (
+        <div>
+            <header style={{fontSize:'70px'}}>אנא התחבר כדי לצפות בתוכן העמוד</header>
+            <header style={{fontSize:'70px'}}>אם אתה מחובר, צור קשר עם התמיכה</header>
+        </div>
     );
   }
 
