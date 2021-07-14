@@ -13,7 +13,6 @@ const Prices = React.lazy(() => import('./pages/Prices'));
 const Workouts = React.lazy(() => import('./pages/Workouts'));
 
 function App() {
-
     const [user, setUser] = useState(false);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -24,10 +23,11 @@ function App() {
     }
 
     const popupHandler = () => {
+        // console.log("isPopupOpen " , isPopupOpen)
         setIsPopupOpen(!isPopupOpen);
     }
-
     const blurOrNot = isPopupOpen ? { filter: 'blur(5px)' } : null;
+
     return (
         <div style={
             {
@@ -42,7 +42,7 @@ function App() {
             <PopupAuth buttonText={btnText}
                 setUser={userHandle}
                 setPopup={popupHandler}/>
-            <main style={{ filter: 'blur(5px)' }} >
+            <main style={blurOrNot} >
                 <Suspense fallback={<div className="centered"> <LoadingSpinner /> </div>}>
                     <Switch >
                         <Route path='/' exact>

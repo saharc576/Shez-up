@@ -20,18 +20,21 @@ const PopupAuth = ({buttonText, setUser, setPopup}) => {
 
 
     return (
+
       <Popup
-        trigger={<button className={isLogin ? "sign-in" : "log-in" }  onClick={setPopup}> {buttonText} </button>}
+        trigger={<button className={isLogin ? "sign-in" : "log-in" } > {buttonText} </button>}
         modal
         nested
-      >
+        onOpen={setPopup}
+        onClose={setPopup}
+        
+        >
       {close => (
         <div >
           <div className="content">
           <div className="signin">
               {isLogin && <Login _setUser={setUser}/>}
               {isRegister && <Register _setUser={setUser}/>}
-              {isLogout && <Logout _setUser={setUser}/>}
           </div>
           </div>
         </div>
