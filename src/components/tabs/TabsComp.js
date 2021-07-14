@@ -9,7 +9,7 @@ const TabsComp = ({loggedIn}) => {
                 className={classes.icon}/> 
                 <ul style={{listStyleType: 'none' , position: 'absolute', alignItems: 'center', right: '0', top: '0'}} >
                     <li style={{float: 'right'}}> {
-                        !loggedIn && <button className={classes.button} >
+                        !loggedIn && <button className={classes.button} style={{minWidth: '55px'}}>
                             <NavLink activeClassName={
                                     classes.active
                                 }
@@ -36,7 +36,7 @@ const TabsComp = ({loggedIn}) => {
             <div className={
                 classes.header
             }>
-                <nav>
+                <nav >
                     <ul>
 
                         <li>
@@ -78,7 +78,7 @@ const TabsComp = ({loggedIn}) => {
                         <li>
                             <NavLink activeClassName={
                                     classes.active
-                                }
+                                } 
                                 to='/Home'>דף הבית</NavLink>
                         </li>
                     </ul>
