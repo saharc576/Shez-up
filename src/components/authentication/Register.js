@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {register} from './auth'
 import classes from './AuthForm.module.css';
+import { Redirect } from 'react-router-dom'
 
   
 const Register = ({_setUser}) => {
@@ -8,11 +9,15 @@ const Register = ({_setUser}) => {
         email:'',
         password:''
     })
+    const [success, setSuccess] = useState(false);
+
     const handleSubmit = async(e)=>{
         e.preventDefault();
         try {
             await register(form);
             _setUser(true);
+            setSuccess(!success);
+
         } catch (err) {
             alert(err);
         }
@@ -25,6 +30,7 @@ const Register = ({_setUser}) => {
     }
     return (
         <section className={classes.auth}>
+            {success && <Redirect to='/Home'/>}
             <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <div className={

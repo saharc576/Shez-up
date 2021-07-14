@@ -1,0 +1,13 @@
+.bg {
+    /* The image used */
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/shez-up.appspot.com/o/shorti.png?alt=media&token=8cd009d2-c309-4273-b7b8-57f292f9b890");
+  
+    /* Full height */
+    height: 100%;
+    min-height: 1000px;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

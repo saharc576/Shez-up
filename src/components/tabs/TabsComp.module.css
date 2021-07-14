@@ -1,12 +1,15 @@
+
 .header {
   width: 100%;
   height: 5rem;
-  background-color: #044599;
+  background-color: #000000;
   padding: 0 10%;
+  color: white;
 }
 
 .header nav {
   height: 100%;
+  color: white;
 }
 
 .header ul {
@@ -17,11 +20,13 @@
   margin: 0;
   align-items: center;
   justify-content: center;
+  color: white
 }
 
 .header li {
   margin: 0 1rem;
   width: 5rem;
+  color: white;
 }
 
 .header a {
@@ -35,4 +40,34 @@
   color: #95bcf0;
   padding-bottom: 0.25rem;
   border-bottom: 4px solid #95bcf0;
+  
+}
+
+
+.button {
+  background-color: #000000;
+  border:2px solid rgb(25, 114, 17);
+  margin: 3px;
+  color:snow !important;
+  padding: 15px;
+  min-width: 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 100%;
+  top: 3px;
+
+}
+.button :hover {
+  color:snow;
+  text-decoration: none;
+
+} 
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 80px;
 }

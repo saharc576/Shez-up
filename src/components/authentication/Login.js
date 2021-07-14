@@ -1,14 +1,19 @@
 import React, {useState} from 'react'
 import {login} from './auth'
 import classes from './AuthForm.module.css';
+import { Redirect } from 'react-router-dom'
+
 
 const Login = ({_setUser}) => {
     const [form, setForm] = useState({email: '', password: ''})
+    const [success, setSuccess] = useState(false);
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await login(form);
             _setUser(true);
+            setSuccess(!success);
         } catch (err) {
             alert(err);
         }
@@ -20,7 +25,9 @@ const Login = ({_setUser}) => {
         margin: '0.5rem'
     }
     return (
-        <section className={classes.auth}>
+
+        <section className={classes.auth} >
+            {success && <Redirect to='/Home'/>}
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 <div className={

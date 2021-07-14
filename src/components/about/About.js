@@ -1,4 +1,5 @@
 import React from 'react'
+import './About.css'
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
@@ -7,13 +8,15 @@ import {
 
   const About = () => {
       return (
-        <div>
-            <CardTitle dir="rtl">
-                
-            <body dir="rtl" className="form">
+        <div className="div">
+          <section dir="rtl" className="section">
+            פה יהיה הרבה תוכן.... שדגכחשלךדגחכמ ךף
+            פה יהיה הרבה תוכן.... שדגכחשלךדגחכמ ךף
+            פה יהיה הרבה תוכן.... שדגכחשלךדגחכמ ךף
+            פה יהיה הרבה תוכן.... שדגכחשלךדגחכמ ךף
+            פה יהיה הרבה תוכן.... שדגכחשלךדגחכמ ךף
 
-            </body>
-            </CardTitle>
+          </section>
         </div>
       );
   }

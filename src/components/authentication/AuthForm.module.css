@@ -1,9 +1,10 @@
 .auth {
     margin: 3rem auto;
-    width: 95%;
-    max-width: 25rem;
-    border-radius: 6px;
-    background-color: #38015c;
+    width: 50%;
+    height: 60%;
+    position:relative;
+    border-radius: 10px;
+    background-color: #07010c;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     text-align: center;
@@ -71,3 +72,4 @@
     background-color: transparent;
     color: #ae82cc;
   }
+  
