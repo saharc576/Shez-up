@@ -13,7 +13,7 @@ const TabsComp = ({loggedIn}) => {
                             <NavLink activeClassName={
                                     classes.active
                                 }
-                                to='/Login'>כניסה</NavLink>
+                                to='/Login' style={{color: "white"}}>כניסה</NavLink>
                         </button>
                     } </li>
                     <li style={{float: 'right'}}> {
@@ -21,7 +21,7 @@ const TabsComp = ({loggedIn}) => {
                             <NavLink activeClassName={
                                     classes.active
                                 }
-                                to='/Register'>הרשמה</NavLink>
+                                to='/Register' style={{color: "white"}}>הרשמה</NavLink>
                         </button>
                     } </li>
                     <li style={{float: 'right'}}> {
@@ -29,7 +29,7 @@ const TabsComp = ({loggedIn}) => {
                             <NavLink activeClassName={
                                     classes.active
                                 }
-                                to='/Logout'>התנתק</NavLink>
+                                to='/Logout' style={{color: "white"}}>התנתק</NavLink>
                         </button>
                     } </li>
                 </ul>
@@ -39,12 +39,7 @@ const TabsComp = ({loggedIn}) => {
                 <nav >
                     <ul>
 
-                        <li>
-                            <NavLink activeClassName={
-                                    classes.active
-                                }
-                                to='/Contact'>צור קשר</NavLink>
-                        </li>
+                    
                         <li>
                             <NavLink activeClassName={
                                     classes.active

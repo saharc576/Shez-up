@@ -8,6 +8,10 @@ import Login from './components/authentication/Login.js';
 import Register from './components/authentication/Register.js';
 import Logout from './components/authentication/Logout.js';
 import './css/Background.css'
+import './css/SocialNetworks.css'
+import { Linking } from 'react-native';
+import { Facebook, Phone } from 'react-feather';
+
 
 const GalleryPage = React.lazy(() => import('./pages/GalleryPage'));
 const WorkoutVideos = React.lazy(() => import('./pages/WorkoutVideos.js'));
@@ -16,15 +20,13 @@ const Workouts = React.lazy(() => import('./pages/Workouts'));
 
 function App() {
     const [user, setUser] = useState(false);
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-    const btnText = user ? 'התנתק' : 'התחבר'
-
-    const userHandle = () => {
-        setUser(!user)
+    
+    const phoneNumber = "972537171929";
+    
+    const sendMsgHandler = () => {
+        const msg = `https://wa.me/${phoneNumber}`;
+        Linking.openURL(msg);
     }
-
-
 
     return (
         <div className="bg">
@@ -55,9 +57,6 @@ function App() {
                             {user && <WorkoutVideos />}
                             {!user && <Redirect to='/Login' />}
                         </Route>
-                        <Route path='/Contact'>
-                            sfgs
-                        </Route>
                         <Route path='/Login'>
                             <Login _setUser={setUser}/>
                         </Route>
@@ -72,11 +71,13 @@ function App() {
                     </Switch>
                 </Suspense>
             </main>
+            <button className="whatsapp" onClick={sendMsgHandler}>
+                <Phone/>
+            </button>
+
+
         </div>
     );
 }
 
 export default App;
-// const fetchWorkoutCards = () => {
-//     fetch('https://shez-up-default-rtdb.europe-west1.firebasedatabase.app/')
-// }
