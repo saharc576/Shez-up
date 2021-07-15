@@ -39,18 +39,6 @@ const GalleryPage = () => {
         <div>
             <button className="button" onClick={gridModeHandler}>
                 {btnText}</button>
-            <div style={
-                {
-                    paddingTop: '0',
-                    paddingBottom: '30px',
-                    display: 'block',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    flex: 'center',
-                    width: '80%',
-                    backgroundColor: "rgb(180,180,180, 0.6)"
-                }
-            }>
                 <div className="row">
                     <div className={classColumn}>
                         <img src="https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg" alt=""/>
@@ -83,7 +71,6 @@ const GalleryPage = () => {
 
                 </div>
             </div>
-        </div>
     );
 
 }

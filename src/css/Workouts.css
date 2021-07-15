@@ -1,0 +1,54 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    padding-top: '0';
+    padding-bottom: '30px';
+    
+    flex: 'center';
+    background-color: "rgb(180,180,180, 0.6)"
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    max-width: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .hide {
+    display: none;
+  }
+  
+  .myDIV:hover + .hide {
+    display: block;
+    color: red;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  .button {
+      width: 80%;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 10px;
+      background-color: teal;
+
+  }
+  .button:hover {
+    background-color: rgb(3, 107, 107);
+    color: white;
+}
+
+  
