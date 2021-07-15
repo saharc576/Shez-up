@@ -1,9 +1,6 @@
 import React from 'react'
 import './About.css'
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
-  } from 'reactstrap';
+
 
 
   const About = () => {

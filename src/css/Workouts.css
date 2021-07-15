@@ -11,6 +11,7 @@
   
   /* Create four equal columns that sits next to each other */
   .column {
+    flex: 50%;
     max-width: 50%;
     padding: 0 4px;
   }
@@ -21,14 +22,7 @@
     vertical-align: middle;
     width: 100%;
   }
-  .hide {
-    display: none;
-  }
-  
-  .myDIV:hover + .hide {
-    display: block;
-    color: red;
-  }
+
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {

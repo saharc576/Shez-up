@@ -11,6 +11,7 @@ import './css/Background.css'
 import './css/SocialNetworks.css'
 import { Linking } from 'react-native';
 import { Phone } from 'react-feather';
+import { projectStorage } from './firebase/Config.js';
 
 
 const GalleryPage = React.lazy(() => import('./pages/GalleryPage'));
@@ -18,9 +19,12 @@ const WorkoutVideos = React.lazy(() => import('./pages/WorkoutVideos.js'));
 const Prices = React.lazy(() => import('./pages/Prices'));
 const Workouts = React.lazy(() => import('./pages/Workouts'));
 
+
 function App() {
-    const [user, setUser] = useState(false);
     
+    const [user, setUser] = useState(false);
+
+ 
     
     const phoneNumber = "972537171929";
     
@@ -28,7 +32,7 @@ function App() {
         const msg = `https://wa.me/${phoneNumber}`;
         Linking.openURL(msg);
     }
-
+    
     return (
         <div className="bg">
             <TabsComp loggedIn={user}/>
