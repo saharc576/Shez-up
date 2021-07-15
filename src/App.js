@@ -10,7 +10,7 @@ import Logout from './components/authentication/Logout.js';
 import './css/Background.css'
 import './css/SocialNetworks.css'
 import { Linking } from 'react-native';
-import { Facebook, Phone } from 'react-feather';
+import { Phone } from 'react-feather';
 
 
 const GalleryPage = React.lazy(() => import('./pages/GalleryPage'));
@@ -20,6 +20,7 @@ const Workouts = React.lazy(() => import('./pages/Workouts'));
 
 function App() {
     const [user, setUser] = useState(false);
+    
     
     const phoneNumber = "972537171929";
     
@@ -74,7 +75,6 @@ function App() {
             <button className="whatsapp" onClick={sendMsgHandler}>
                 <Phone/>
             </button>
-
 
         </div>
     );
