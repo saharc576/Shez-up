@@ -2,7 +2,6 @@ import React, {Suspense, useState} from 'react';
 import {Route, Switch, Redirect, Prompt} from 'react-router-dom'
 import TabsComp from './components/tabs/TabsComp.js';
 import Home from './pages/Home'
-import Nutrition from './pages/Nutrition.js';
 import LoadingSpinner from './components/loadingSpinner/LoadingSpinner.js';
 import Login from './components/authentication/Login.js';
 import Register from './components/authentication/Register.js';
@@ -18,13 +17,13 @@ const GalleryPage = React.lazy(() => import('./pages/GalleryPage'));
 const WorkoutVideos = React.lazy(() => import('./pages/WorkoutVideos.js'));
 const Prices = React.lazy(() => import('./pages/Prices'));
 const Workouts = React.lazy(() => import('./pages/Workouts'));
+const Nutrition = React.lazy(() => import('./pages/Nutrition'));
 
 
 function App() {
     
     const [user, setUser] = useState(false);
 
- 
     
     const phoneNumber = "972537171929";
     

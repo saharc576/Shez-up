@@ -1,14 +1,16 @@
 .card {
+    background-color: (220,220,220, 0.6);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: arial;
+    border-radius: 10%;
   }
 
   
   .price {
-    color: grey;
+    color: rgb(83, 82, 82);
     font-size: 22px;
   }
   
@@ -16,12 +18,15 @@
     border: none;
     outline: 0;
     padding: 12px;
+    bottom: 0%;
     color: white;
     background-color: #000;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    border-radius: 20px;
+
   }
   
   .card button:hover {
@@ -30,5 +35,6 @@
 
 .card img {
     width: 100%;
+    border-radius: 10%;
 }
 

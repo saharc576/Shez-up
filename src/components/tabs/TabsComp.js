@@ -74,7 +74,7 @@ const TabsComp = ({loggedIn}) => {
                             <NavLink activeClassName={
                                     classes.active
                                 } 
-                                to='/Home'>דף הבית</NavLink>
+                                to='/Home'>בית</NavLink>
                         </li>
                     </ul>
 
