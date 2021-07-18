@@ -1,5 +1,5 @@
 import React, {Suspense, useState} from 'react';
-import {Route, Switch, Redirect, Prompt} from 'react-router-dom'
+import {Route, Switch, Redirect, useLocation} from 'react-router-dom'
 import TabsComp from './components/tabs/TabsComp.js';
 import Home from './pages/Home'
 import LoadingSpinner from './components/loadingSpinner/LoadingSpinner.js';
@@ -10,6 +10,7 @@ import BackgroundStyle from './css/Background.module.css'
 import SocialStyle from './css/SocialNetworks.module.css'
 import { Linking } from 'react-native';
 import { Phone } from 'react-feather';
+import { useEffect } from 'react';
 
 
 const GalleryPage = React.lazy(() => import('./pages/GalleryPage'));
@@ -18,12 +19,22 @@ const Prices = React.lazy(() => import('./pages/Prices'));
 const Workouts = React.lazy(() => import('./pages/Workouts'));
 const Nutrition = React.lazy(() => import('./pages/Nutrition'));
 
+let location;
+function usePageView () {
+    location = useLocation().pathname;
+    useEffect(() => {
+   }, [location]);
+}
 
 function App() {
-    
+    usePageView();
     const [user, setUser] = useState(false);
 
-    
+
+    const mainStyle = (location === "/Home" || location === "/Workouts") 
+                        ? {marginTop: '2rem'} 
+                        : {marginTop: '7rem'};
+
     const phoneNumber = "972537171929";
     
     const sendMsgHandler = () => {
@@ -35,7 +46,7 @@ function App() {
     return (
         <div className={BackgroundStyle.bg}>
             <TabsComp loggedIn={user}/>
-            <main >
+            <main style={mainStyle}>
                 <Suspense fallback={<div className="centered"> <LoadingSpinner /> </div>}>
                     <Switch >
                         <Route path='/' exact>

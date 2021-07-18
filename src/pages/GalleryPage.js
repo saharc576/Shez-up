@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import '../css/Gallery.css'
 
 
-// source: https://www.npmjs.com/package/react-grid-gallery
 
 const GalleryPage = () => {
 
