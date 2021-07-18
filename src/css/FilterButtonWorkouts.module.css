@@ -1,11 +1,12 @@
 .btnGroup button {
-    background-color: #04AA6D; /* Green background */
-    border: 1px solid green; /* Green border */
-    color: white; /* White text */
+    background-color: #f1f1f1; /* Green background */
+    border: 1px solid rgb(179, 180, 179); /* Green border */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
-    float: right; /* Float the buttons side by side */
-
+    float:left; /* Float the buttons side by side */
+    position: fixed;
+    width: 100%;
+    
   }
   
   .btnGroup button:not(:last-child) {
@@ -21,6 +22,37 @@
   
   /* Add a background color on hover */
   .btnGroup button:hover {
-    background-color: #3e8e41;
+    background-color: #ddd;
   }
+
+  .btnGroup button:active {
+    background-color: #666;
+  }
+
+  .ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    position: fixed;
+
+  }
+  
+  .li {
+    float: left;
+  }
+  .button {
+    border: 1px solid rgb(179, 180, 179);
+    background-color: #f1f1f1;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    cursor: pointer; /* Pointer/hand icon */
+  }
+  .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
   

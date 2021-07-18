@@ -11,6 +11,7 @@ import SocialStyle from './css/SocialNetworks.module.css'
 import { Linking } from 'react-native';
 import { Phone } from 'react-feather';
 import { useEffect } from 'react';
+import './index.css'
 
 
 const GalleryPage = React.lazy(() => import('./pages/GalleryPage'));
@@ -31,8 +32,10 @@ function App() {
     const [user, setUser] = useState(false);
 
 
-    const mainStyle = (location === "/Home" || location === "/Workouts") 
-                        ? {marginTop: '2rem'} 
+    const mainStyle = (location === "/Home" || location === "/Gallery") 
+                        ? {marginTop: '7rem'} 
+                        : (location === "/Workouts")
+                        ? {marginTop: '5rem'}
                         : {marginTop: '7rem'};
 
     const phoneNumber = "972537171929";
@@ -44,9 +47,10 @@ function App() {
     
     
     return (
-        <div className={BackgroundStyle.bg}>
+
+        <div className={BackgroundStyle.bg} >
             <TabsComp loggedIn={user}/>
-            <main style={mainStyle}>
+            <div style={mainStyle}>
                 <Suspense fallback={<div className="centered"> <LoadingSpinner /> </div>}>
                     <Switch >
                         <Route path='/' exact>
@@ -77,12 +81,12 @@ function App() {
                         </Route>
                     </Switch>
                 </Suspense>
-            </main>
+            </div>
             <button className={SocialStyle.whatsapp} onClick={sendMsgHandler}>
                 <Phone/>
             </button>
-
         </div>
+
     );
 }
 

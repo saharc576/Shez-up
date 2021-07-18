@@ -5,6 +5,9 @@
   background-color: #000000;
   padding: 0 10%;
   color: white;
+  position: absolute;
+  z-index: 0;
+
 }
 
 .header nav {
@@ -21,7 +24,9 @@
   margin: 0;
   align-items: center;
   justify-content: center;
-  color: white
+  color: white;
+
+
 }
 
 .header li {
@@ -60,6 +65,8 @@
   max-width: auto;
   min-width: auto;
   min-height: 55px;
+  z-index: 1;
+
 }
 .button :hover {
   color:rgb(114, 109, 109);
@@ -72,4 +79,6 @@
   left: 0;
   top: 0;
   max-height: 80px;
+  z-index: 1;
+
 }

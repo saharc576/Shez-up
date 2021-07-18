@@ -25,12 +25,3 @@ p {
   color: #042b5f;
 }
 
-/* image grid styles */
-.img-grid{
-  display: grid;
-  justify-content: center;
-  position: relative;
-  margin-top: 3%;
-  margin-left: 20%;
-  margin-right: 20%;
-}
