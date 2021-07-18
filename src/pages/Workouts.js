@@ -27,7 +27,6 @@ const Workouts = () => {
         }
     ];
 
-    let workoutsToRender = workoutsUrls;
 
 
     const [showUpperBody, setShowUpperBody] = useState(true);
@@ -35,26 +34,6 @@ const Workouts = () => {
     const [showFullBody, setShowFullBody] = useState(true);
     const [showAll, setShowAll] = useState(true);
 
-
-    // const handleTypeFilter = (removeFromView, addToView) => {
-    //     let newFilter = typeFilter;
-    //     if (removeFromView) {
-    //         if (typeFilter.includes(removeFromView)) {
-    //             let indexToDlt = newFilter.indexOf(removeFromView);
-    //             // swapping first with indexToDlt to use 'shift'
-    //             let first = newFilter[0];
-    //             newFilter[0] = removeFromView;
-    //             newFilter[indexToDlt] = first;
-    //             newFilter.shift()
-    //         }
-    //     } else {
-    //         if (!typeFilter.includes(addToView)) {
-    //             newFilter.push(addToView);
-    //         }
-    //     }
-    //     setTypeFilter(newFilter);
-    // }
-    
 
     const filterHandler = (typeToShow) => {
         if (typeToShow === "Upper body") {
@@ -76,21 +55,21 @@ const Workouts = () => {
             setShowAll(false);
         }
         else {
-            setShowFullBody(false);
-            setShowLowerBody(false);
+            setShowFullBody(true);
+            setShowLowerBody(true);
             setShowUpperBody(true);
-            setShowAll(false);
+            setShowAll(true);
         }
         
     }
     return (
         <div >
-            <div >
+            <div style={{paddingBottom:'2rem'}}>
                 <ul className={FilterButtons.ul}> 
-                <li className={FilterButtons.li}> <button className={FilterButtons.button} style={{minWidth: '20%'}} onClick={() => filterHandler("Upper body")}>Upper body</button> </li>
-                <li className={FilterButtons.li}> <button className={FilterButtons.button} style={{minWidth: '20%'}} onClick={() => filterHandler("Lower body")}>Lower body</button> </li>
-                <li className={FilterButtons.li}> <button className={FilterButtons.button} style={{minWidth: '20%'}} onClick={() => filterHandler("Full body")}>Full body</button> </li>
-                <li className={FilterButtons.li}> <button className={FilterButtons.button} style={{minWidth: '20%'}} onClick={() => filterHandler("Show all")}>Show all</button> </li>
+                <li className={FilterButtons.li}> <button className={FilterButtons.button} onClick={() => filterHandler("Show all")}>Show all</button> </li>
+                {showUpperBody && <li className={FilterButtons.li}> <button className={FilterButtons.button} onClick={() => filterHandler("Upper body")}>Upper body</button> </li>}
+                {showLowerBody && <li className={FilterButtons.li}> <button className={FilterButtons.button} onClick={() => filterHandler("Lower body")}>Lower body</button> </li>}
+                {showFullBody && <li className={FilterButtons.li}> <button className={FilterButtons.button} onClick={() => filterHandler("Full body")}>Full body</button> </li>}
                 </ul>
             </div>
             <div className={

@@ -1,40 +1,10 @@
-.btnGroup button {
-    background-color: #f1f1f1; /* Green background */
-    border: 1px solid rgb(179, 180, 179); /* Green border */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float:left; /* Float the buttons side by side */
-    position: fixed;
-    width: 100%;
-    
-  }
-  
-  .btnGroup button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-  }
-  
-  /* Clear floats (clearfix hack) */
-  .btnGroup:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  /* Add a background color on hover */
-  .btnGroup button:hover {
-    background-color: #ddd;
-  }
-
-  .btnGroup button:active {
-    background-color: #666;
-  }
 
   .ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
     overflow: hidden;
-    background-color: #333333;
     position: fixed;
 
   }
@@ -44,15 +14,22 @@
   }
   .button {
     border: 1px solid rgb(179, 180, 179);
-    background-color: #f1f1f1;
+    background-color: #6e6b6b;
     display: block;
     text-align: center;
     padding: 16px;
     text-decoration: none;
     cursor: pointer; /* Pointer/hand icon */
+    min-width: 200px;
   }
   .button:not(:last-child) {
     border-right: none; /* Prevent double borders */
   }
+  .button:hover {
+    background-color: #ddd;
+  }
   
-  
+  .button:active {
+    background-color: #666;
+
+  }
