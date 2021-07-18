@@ -1,16 +1,16 @@
 import React from 'react'
-import './Card.css'
+import CardStyle from './Card.module.css'
 
 const Card = ({onClick ,imgURL, title, content}) => {
 
     return (
-        <div className="card">
-            <img src={imgURL} className="img" />
+        <div className={CardStyle.card}>
+            <img src={imgURL} className={CardStyle.img} />
             <div className="Container">
                 <h4>
                     <b>{title}</b>
                 </h4>
-                <p className="price"> {content} </p>
+                <p className={CardStyle.price}> {content} </p>
                 <p> <button onClick={onClick}> הזמן </button> </p>
             </div>
         </div>

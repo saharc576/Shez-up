@@ -6,11 +6,10 @@ import LoadingSpinner from './components/loadingSpinner/LoadingSpinner.js';
 import Login from './components/authentication/Login.js';
 import Register from './components/authentication/Register.js';
 import Logout from './components/authentication/Logout.js';
-import './css/Background.css'
-import './css/SocialNetworks.css'
+import BackgroundStyle from './css/Background.module.css'
+import SocialStyle from './css/SocialNetworks.module.css'
 import { Linking } from 'react-native';
 import { Phone } from 'react-feather';
-import { projectStorage } from './firebase/Config.js';
 
 
 const GalleryPage = React.lazy(() => import('./pages/GalleryPage'));
@@ -32,8 +31,9 @@ function App() {
         Linking.openURL(msg);
     }
     
+    
     return (
-        <div className="bg">
+        <div className={BackgroundStyle.bg}>
             <TabsComp loggedIn={user}/>
             <main >
                 <Suspense fallback={<div className="centered"> <LoadingSpinner /> </div>}>
@@ -41,18 +41,10 @@ function App() {
                         <Route path='/' exact>
                             <Redirect to='/Home'/>
                         </Route>
-                        <Route path='/Home'>
-                            <Home/>
-                        </Route>
-                        <Route path='/Workouts'>
-                            <Workouts/>
-                        </Route>
-                        <Route path='/Prices'>
-                            <Prices/>
-                        </Route>
-                        <Route path='/Gallery'>
-                            <GalleryPage/>
-                        </Route>
+                        <Route path='/Home' component={Home}></Route>
+                        <Route path='/Workouts' component={Workouts}></Route>
+                        <Route path='/Prices' component={Prices}></Route>
+                        <Route path='/Gallery' component={GalleryPage}></Route>
                         <Route path='/personal/nutrion' exact>
                             {user && <Nutrition />}
                             {!user && <Redirect to='/Login' />}
@@ -75,7 +67,7 @@ function App() {
                     </Switch>
                 </Suspense>
             </main>
-            <button className="whatsapp" onClick={sendMsgHandler}>
+            <button className={SocialStyle.whatsapp} onClick={sendMsgHandler}>
                 <Phone/>
             </button>
 

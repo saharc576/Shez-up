@@ -4,21 +4,19 @@
     padding: 0 4px;
     padding-top: '0';
     padding-bottom: '30px';
-    
-    flex: 'center';
-    background-color: "rgb(180,180,180, 0.6)"
   }
   
   /* Create four equal columns that sits next to each other */
   .column {
-    flex: 50%;
-    max-width: 50%;
+    flex: 33.33333%;
+    max-width: 33.33333%;
     padding: 0 4px;
   }
   
   .column img {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
     vertical-align: middle;
     width: 100%;
   }

@@ -1,26 +1,30 @@
 import {useParams} from 'react-router-dom';
-import '../css/Nutrition.css'
+import NutritionStyle from '../css/Nutrition.module.css'
 
 const Nutrition = () => {
 
     return (
         <div>
 
-            <div className="container"
+            <div className={
+                    NutritionStyle.container
+                }
                 style={
-                    {backgroundImage: 'linear-gradient(rgb(180,180,180,0.1), rgb(180,180,180,0.6))'}
+                    {
+                        backgroundImage: 'linear-gradient(rgb(180,180,180,0), rgb(180,180,180,2))',
+                        minHeight: '30rem'
+                    }
                 }
                 dir="rtl">
-                <div className="row">
-                    <div className="column-66"
-                        style={
-                            {
-                                position: 'absolute',
-                                justifyContent: 'center',
-                                textAlign: 'center'
-                            }
+                <div className={
+                    NutritionStyle.row
+                }>
+                    <div className={
+                        NutritionStyle.column66
                     }>
-                        <h1 className="xlarge-font"
+                        <h1 className={
+                                NutritionStyle.xlargeFont
+                            }
                             style={
                                 {color: 'black'}
                         }>
@@ -33,43 +37,66 @@ const Nutrition = () => {
                                     color: 'black'
                                 }
                             }>
-                                <section dir="rtl" className="section">
+                                <section dir="rtl">
                                     <ul style={
-                                        {listStyle: 'none'}
-                                    } >
-                                        <li dir="rtl">
+                                        {listStyle: 'inside'}
+                                    }>
+                                        <li dir="rtl"
+                                            style={
+                                                {fontSize: '30px'}
+                                        }>
                                             קצת פרטים על תזונה נכונה</li>
-                                        <li dir="rtl">
+                                        <li dir="rtl"
+                                            style={
+                                                {fontSize: '30px'}
+                                        }>
                                             קצת פרטים על תזונה נכונה</li>
-                                        <li>
+                                        <li dir="rtl"
+                                            style={
+                                                {fontSize: '30px'}
+                                        }>
                                             קצת פרטים על תזונה נכונה</li>
-                                        <li>
+                                        <li dir="rtl"
+                                            style={
+                                                {fontSize: '30px'}
+                                        }>
                                             קצת פרטים על תזונה נכונה</li>
                                     </ul>
                                 </section>
                             </div>
                         </p>
                     </div>
-                    <div className="column-33">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/shez-up.appspot.com/o/Nutrition.png?alt=media&token=d2585576-b841-41c1-8a03-b1a265f93c7b"
-                            style={
-                                {filter:"grayscale(100%)", zIndex:"-1"}
-                            }/>
-                    </div>
                 </div>
             </div>
 
-            <div className="container"
+            <div className={
+                    NutritionStyle.container
+                }
                 style={
-                    {backgroundColor: '#f1f1f1'}
+                    {
+                        backgroundColor: '#f1f1f1',
+                        minHeight: '30rem'
+                    }
             }>
-                <div className="row">
-                    <div className="column-33"></div>
-                    <div className="column-66">
-                        <h1 className="xlarge-font" dir="rtl">
+                <div className={
+                    NutritionStyle.row
+                }>
+
+                    <div className={
+                            NutritionStyle.column66
+                        }
+                        style={
+                            {float: 'left'}
+                    }>
+                        <h1 className={
+                                NutritionStyle.xlargeFont
+                            }
+                            dir="rtl">
                             <b>פחמימות, להפסיק?</b>
                         </h1>
-                        <h1 className="large-font"
+                        <h1 className={
+                                NutritionStyle.largeFont
+                            }
                             style={
                                 {color: 'red'}
                         }>
@@ -80,21 +107,31 @@ const Nutrition = () => {
                                 {fontSize: '24px'}
                             }>A revolution in resolution.</span>
                             Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                       
+
                     </div>
                 </div>
             </div>
-            <div className="container"
+            <div className={
+                    NutritionStyle.container
+                }
                 style={
                     {backgroundColor: 'yellow'}
             }>
-                <div className="row">
-                    <div className="column-33"></div>
-                    <div className="column-66">
-                        <h1 className="xlarge-font" dir="rtl">
+                <div className={
+                    NutritionStyle.row
+                }>
+                    <div className={
+                        NutritionStyle.column66
+                    }>
+                        <h1 className={
+                                NutritionStyle.xlargeFont
+                            }
+                            dir="rtl">
                             <b>בואו ננפץ מיתוסים</b>
                         </h1>
-                        <h1 className="large-font"
+                        <h1 className={
+                                NutritionStyle.largeFont
+                            }
                             style={
                                 {color: 'red'}
                         }>
@@ -105,7 +142,7 @@ const Nutrition = () => {
                                 {fontSize: '24px'}
                             }>A revolution in resolution.</span>
                             Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        
+
                     </div>
                 </div>
             </div>

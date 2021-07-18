@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import '../css/Gallery.css'
-import '../css/Background.css'
 
 
 // source: https://www.npmjs.com/package/react-grid-gallery

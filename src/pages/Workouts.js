@@ -1,8 +1,7 @@
 import React from 'react'
-import WorkoutCard from '../components/workoutCard/WorkoutCard';
-import '../components/workoutCard/WorkoutCard.css'
-import {NavLink} from 'react-router-dom';
-import '../css/Workouts.css'
+// import WorkoutCard from '../components/workoutCard/WorkoutCard';
+// import '../components/workoutCard/WorkoutCard.css'
+import WorkoutsStyle from '../css/Workouts.module.css'
 
 
 const Workouts = () => {
@@ -10,20 +9,20 @@ const Workouts = () => {
 
 
     return (
-        <div className="row">
-            <div className="column">
+        <div className={WorkoutsStyle.row} style={{backgroundImage: 'linear-gradient(rgb(10, 10, 10, 0), rgb(10, 10, 10, 0.8))'}}>
+            <div className={WorkoutsStyle.column}>
                 <img src={workoutsUrls[0]} alt=""/>
                 <img src={workoutsUrls[0]} alt=""/>
                 <img src={workoutsUrls[0]} alt=""/>
                 <img src={workoutsUrls[0]} alt=""/>
             </div>
-            <div className="column">
+            <div className={WorkoutsStyle.column}>
                 <img src={workoutsUrls[0]} alt=""/>
                 <img src={workoutsUrls[0]} alt=""/>
                 <img src={workoutsUrls[0]} alt=""/>
                 <img src={workoutsUrls[0]} alt=""/>
             </div>
-            <div className="column">
+            <div className={WorkoutsStyle.column}>
                 <img src={workoutsUrls[0]} alt=""/>
                 <img src={workoutsUrls[0]} alt=""/>
                 <img src={workoutsUrls[0]} alt=""/>

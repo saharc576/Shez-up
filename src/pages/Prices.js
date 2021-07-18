@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../components/card/Card'
-import '../components/card/Prices.css'
+import PricesStyle from '../components/card/Prices.module.css'
 import { Linking } from 'react-native';
 
 const Prices = () => {
@@ -27,7 +27,7 @@ const Prices = () => {
 
 
     return (
-        <div className="img-grid">
+        <div className={PricesStyle.imgGrid}>
 
             <Card onClick={() => sendMsgHandler('personal training')} imgURL={imgPersonalTraining[0]} title={imgPersonalTraining[1]} content={imgPersonalTraining[3] + " " + imgPersonalTraining[2]}/>
             <Card onClick={() => sendMsgHandler('personal training')} imgURL={imgPersonalTraining[0]} title={imgPersonalTraining[1]} content={imgPersonalTraining[3] + " " + imgPersonalTraining[2]}/>
