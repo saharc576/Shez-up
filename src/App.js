@@ -15,7 +15,6 @@ import './index.css'
 
 
 const GalleryPage = React.lazy(() => import('./pages/GalleryPage'));
-const WorkoutVideos = React.lazy(() => import('./pages/WorkoutVideos.js'));
 const Prices = React.lazy(() => import('./pages/Prices'));
 const Workouts = React.lazy(() => import('./pages/Workouts'));
 const Nutrition = React.lazy(() => import('./pages/Nutrition'));
@@ -62,10 +61,6 @@ function App() {
                         <Route path='/Gallery' component={GalleryPage}></Route>
                         <Route path='/personal/nutrion' exact>
                             {user && <Nutrition />}
-                            {!user && <Redirect to='/Login' />}
-                        </Route>
-                        <Route path='/personal/workoutVideos' exact >
-                            {user && <WorkoutVideos />}
                             {!user && <Redirect to='/Login' />}
                         </Route>
                         <Route path='/Login'>

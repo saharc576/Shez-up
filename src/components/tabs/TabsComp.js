@@ -50,12 +50,6 @@ const TabsComp = ({loggedIn}) => {
                             <NavLink activeClassName={
                                     classes.active
                                 }
-                                to='/personal/workoutVideos'>הקלטות</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeClassName={
-                                    classes.active
-                                }
                                 to='/Gallery'>גלריה</NavLink>
                         </li>
                         <li>

@@ -1,4 +1,3 @@
-import {useParams} from 'react-router-dom';
 import NutritionStyle from '../css/Nutrition.module.css'
 
 const Nutrition = () => {

@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {logout} from './auth'
-import { Redirect } from 'react-router-dom'
 
 
 const Logout = ({_setUser}) => {
