@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from 'react';
 import WorkoutsStyle from '../css/Workouts.module.css'
 import FilterButtons from '../css/FilterButtonWorkouts.module.css'
+import { isBrowser } from "react-device-detect";
 
 
 const Workouts = () => {
@@ -62,6 +63,130 @@ const Workouts = () => {
             setShowAll(true);
         }
 
+    }
+    if (!isBrowser) {
+        return (
+            <div className={
+                WorkoutsStyle.row
+            }
+            style={
+                {marginTop: '3rem'}
+        }>
+            <div className={
+                WorkoutsStyle.column
+            }>
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[0].url
+                    }
+                    alt={
+                        workoutsUrls[0].type
+                    }/>
+            }
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[1].url
+                    }
+                    alt={
+                        workoutsUrls[1].type
+                    }/>
+            }
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[2].url
+                    }
+                    alt={
+                        workoutsUrls[2].type
+                    }/>
+            }
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[3].url
+                    }
+                    alt={
+                        workoutsUrls[3].type
+                    }/>
+            } </div>
+            <div className={
+                WorkoutsStyle.column
+            }>
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[0].url
+                    }
+                    alt={
+                        workoutsUrls[0].type
+                    }/>
+            }
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[1].url
+                    }
+                    alt={
+                        workoutsUrls[1].type
+                    }/>
+            }
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[2].url
+                    }
+                    alt={
+                        workoutsUrls[2].type
+                    }/>
+            }
+                {
+                (showLowerBody || showAll) && <img src={
+                        workoutsUrls[3].url
+                    }
+                    alt={
+                        workoutsUrls[3].type
+                    }/>
+            } </div>
+            <div className={
+                WorkoutsStyle.column
+            }>
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[1].url
+                    }
+                    alt={
+                        workoutsUrls[1].type
+                    }/>
+            }
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[0].url
+                    }
+                    alt={
+                        workoutsUrls[0].type
+                    }/>
+            }
+                {
+                (showUpperBody || showAll) && <img src={
+                        workoutsUrls[3].url
+                    }
+                    alt={
+                        workoutsUrls[3].type
+                    }/>
+            }
+                {
+                (showLowerBody || showAll) && <img src={
+                        workoutsUrls[3].url
+                    }
+                    alt={
+                        workoutsUrls[3].type
+                    }/>
+            }
+                {
+                (showFullBody || showAll) && <img src={
+                        workoutsUrls[4].url
+                    }
+                    alt={
+                        workoutsUrls[4].type
+                    }/>
+            } </div>
+            </div>
+        );
     }
     return (
         <div>
