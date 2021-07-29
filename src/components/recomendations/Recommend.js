@@ -36,10 +36,10 @@ const Recommend = () => {
 
             <div className={
                 RecommendStyle.mySlides
-            }>
+            }> <div>
                 {(slideIndex === 0) && <q>כל הזמן היו צוחקים עליי שאני שמנמן. שיזף עשה ממני מכונה.</q>}
                 {(slideIndex === 0) && <p className={RecommendStyle.author}>שורטי -</p>}
-
+                </div>
                 {(slideIndex === 1) && <q>לא ידעתי לעשות מתח אחד לפני שהגעתי אליו. היום אני עושה 100 עליות כח ברצף.</q>}
                 {(slideIndex === 1) && <p className={
                     RecommendStyle.author

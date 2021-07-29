@@ -7,8 +7,9 @@
   
   /* Slides */
   .mySlides {
-    padding: 80px;
+    padding-top:2rem;
     text-align: center;
+    justify-content: center;
   }
   
   /* Next & previous buttons */
