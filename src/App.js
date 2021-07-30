@@ -54,7 +54,7 @@ function App() {
             BackgroundStyle.bg
         }>
             {isBrowser && <NavBar loggedIn={user}/>}
-             {/* <NavMobile loggedIn={user}/> */}
+            {isMobile && <NavMobile loggedIn={user}/>}
             <div style={mainStyle}>
                 <Suspense fallback={
                     <div

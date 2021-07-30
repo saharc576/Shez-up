@@ -25,11 +25,11 @@ const NavMobile = ({loggedIn}) => {
                 <Menu color='white' onClick={menuHandler} className={NavBarStyle.menu}/>
             </section>
             <div dir="rtl" className={NavBarStyle.topnav}>
-                    {loggedIn && isOpenMenu &&<NavLink onClick={closeBar} to='/personal/nutrion'>תזונה</NavLink>}
                     {isOpenMenu &&<NavLink onClick={closeBar} to='/Home'>בית</NavLink>}
                     {isOpenMenu &&<NavLink onClick={closeBar} to='/Gallery'>גלריה</NavLink>}
                     {isOpenMenu &&<NavLink onClick={closeBar} to='/Workouts'>אימונים</NavLink>}
                     {isOpenMenu &&<NavLink onClick={closeBar} to='/Prices'>מחירון</NavLink>}
+                    {isOpenMenu &&<NavLink onClick={closeBar} to='/personal/nutrion'>תזונה</NavLink>}
                     {loggedIn && isOpenMenu &&<NavLink onClick={closeBar} to='/Logout'>התנתק</NavLink>}
                     {!loggedIn && isOpenMenu &&<NavLink onClick={closeBar} to='/Login'>כניסה</NavLink>}
                     {!loggedIn && isOpenMenu &&<NavLink onClick={closeBar} to='/Register'>הרשמה</NavLink>}

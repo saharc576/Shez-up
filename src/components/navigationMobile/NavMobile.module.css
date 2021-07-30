@@ -33,6 +33,12 @@
     margin-top: 0;
 }
   
+.menu :active {
+    transition: background-color 0.6s ease;
+    opacity: 1;
+    transform: scale(1);
+
+}
 
   .icon {
     position: absolute;

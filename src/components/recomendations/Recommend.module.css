@@ -69,3 +69,9 @@
   
   /* Add a blue color to the author */
   .author {color: cornflowerblue;}
+
+  @media screen and (max-height: 450px) {
+    .author {
+      display: none;
+    }
+  }
